@@ -58,4 +58,4 @@ while True:
         if (mainmenu.get_current().get_selected_widget()):
             arrow.draw(surface, mainmenu.get_current().get_selected_widget())
     
-    pygame.display.update()
+    pygame.display.update()#prueba github
