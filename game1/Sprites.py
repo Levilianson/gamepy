@@ -17,11 +17,11 @@ class Personaje(sprite.Sprite):
         #Uso completo del sprite alpha es trasparencias
         self.spriteSheet = pygame.image.load("game1/sprites/sheet.png").convert_alpha()
         #escalamos la imagen
-        self.image = pygame.transform.scale(self.spriteSheet.subsurface((0,0,200,420)),(100,200))
+        self.image = pygame.transform.scale(self.spriteSheet.subsurface((0,0,200,420)),(400,200))
         #para mostrar la imagen
         self.rect = self.image.get_rect()
         self.rect.center= (ventana.get_width()/2, ventana.get_height()/2)
-        self.frame = 4 #maximo de imagenes
+        self.frame = 8 #maximo de imagenes       
         self.current_frame = 0
         self.frame_width = 100
         self.frame_height = 200

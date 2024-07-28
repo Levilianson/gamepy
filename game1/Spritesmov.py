@@ -22,7 +22,7 @@ class Personaje(sprite.Sprite):
         #Uso completo del sprite alpha es trasparencias
         self.spriteSheet = pygame.image.load("game1/sprites/sheet.png").convert_alpha()
         #escalamos la imagen
-        self.image = pygame.transform.scale(self.spriteSheet.subsurface((0,0,200,420)),(100,200))
+        self.image = pygame.transform.scale(self.spriteSheet.subsurface((780,1900,200,420)),(100,200))
         #para mostrar la imagen
         self.rect = self.image.get_rect()
         self.rect.center= (ventana.get_width()/2, ventana.get_height()/2)
@@ -32,7 +32,7 @@ class Personaje(sprite.Sprite):
         self.speed = 10
 
         #Para el control de los objetos
-        self.frame = 4 #maximo de imagenes
+        self.frame = 8 #maximo de imagenes
         self.current_frame = 0
         self.frame_width = 100
         self.frame_height = 200
@@ -46,8 +46,8 @@ class Personaje(sprite.Sprite):
 
         #Recortamos las imagenes para hacer el movimiento
         self.image = pygame.transform.scale(self.spriteSheet.subsurface((int(self.current_frame)*
-            self.frame_width*2,0,200,420)),(self.frame_width, self.frame_height))
-
+            self.frame_width*2,1800,200,420)),(self.frame_width, self.frame_height))
+        # frame horizontal, vertical, posicionx e y pantalla, largo y ancho
     def mover(self, x=0, y=0):
         #Para no salir del mapa
         if self.rect.centerx+x >= ventana.get_width() or self.rect.centerx+x < 0:
