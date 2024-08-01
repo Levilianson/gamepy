@@ -49,8 +49,7 @@ class Scene:
             #para dibujar la pantalla
         raise NotImplemented("falta el metodo on.draw")
     
-class Pantalla1(Scene):            
-        #Pantalla azul hasta el enter que cambia
+class Pantalla1(Scene):  #Pantalla azul hasta el enter que cambia
     def __init__(self, director):
         Scene.__init__(self, director)
     def on_update(self, time):
